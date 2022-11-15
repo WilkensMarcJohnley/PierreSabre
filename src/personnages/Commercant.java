@@ -2,7 +2,7 @@ package personnages;
 
 public class Commercant extends Humain{
 	
-	public Commercant(String nom,String boisson, int nbArgent) {
+	public Commercant(String nom, int nbArgent) {
 		super(nom,"the",nbArgent);
 	}
 	
@@ -10,7 +10,7 @@ public class Commercant extends Humain{
 	public int seFaireExtorquer() {
 		int argent;
 		argent=nbArgent;
-		nbArgent=0;
+		perdreArgent(nbArgent);
 		parler("J’ai tout perdu! Le monde est trop injuste...");
 		return argent;
 	}
@@ -22,7 +22,7 @@ public class Commercant extends Humain{
 	
 	public static void main(String[] args) {
 		Commercant commercant;
-		commercant= new Commercant("john","biere",10);
+		commercant= new Commercant("john",10);
 		commercant.direBonjour();
 	}
 }
