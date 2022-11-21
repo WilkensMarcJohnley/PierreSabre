@@ -6,7 +6,7 @@ public class Humain {
 	private String boisson;
 	protected int nbArgent;
 	private int taille_memoire=30;
-	private Humain[] memoire= new Humain[taille_memoire];
+	protected Humain[] memoire= new Humain[taille_memoire];
 	protected int nbConnaissance=0;
 	
 	public Humain(String nom, String boisson, int nbArgent) {

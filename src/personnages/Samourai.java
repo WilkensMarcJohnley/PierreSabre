@@ -3,9 +3,9 @@ package personnages;
 public class Samourai extends Ronin {
 	String seigneur;
 
-	public Samourai(String seigneur, String boisson,String nom , int nbArgent) {
-		super(nom, boisson, nbArgent);
-		this.seigneur = seigneur;
+	public Samourai(String seigneur,String nom , String boisson, int nbArgent) {
+		super(nom, boisson,nbArgent);
+		this.seigneur=seigneur;
 	}
 	
 	@Override
@@ -15,5 +15,7 @@ public class Samourai extends Ronin {
 
 	}
 	
-	
+	public void boire(String boisson) {
+		parler("Qu'est-ce que je vais choisir comme boisson ? Tiens je vais prendre du " + boisson);
+	}
 }
